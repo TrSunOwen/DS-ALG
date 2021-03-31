@@ -7,6 +7,7 @@ data structures&algorithms
 
 ### day1
 
+*   Lecture week1 completed
 *   lab1 completed
 *   hw0 completed
 
