@@ -1,6 +1,19 @@
 public class BreakContinue {
     public static void windowPosSum(int[] a, int n) {
         /** your code here */
+        for (int i = 0; i < a.length; i++) {
+            int sum = 0;
+            if (a[i] < 0) {
+                continue;
+            }
+            for (int j = i; j <= (n + i); j++) {
+                if (j == a.length) {
+                    break;
+                }
+                sum = sum + a[j];
+                a[i] = sum;
+            }
+        }
     }
 
     public static void main(String[] args) {
