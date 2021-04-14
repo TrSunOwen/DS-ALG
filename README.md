@@ -7,11 +7,28 @@ data structures&algorithms
 
 ### day1
 
-*   Lecture week1: completed
+*   Lecture of week1 (lecture 1, 2): completed
 *   lab1: completed
 *   hw0: completed
 *   lab2setup: completed
 *   lab2: DebugPractice1, 2 completed
+
+
+
+### day2
+
+新设定：在IDEA中，
+
+*   每次大的project就叫做Week xxx
+*   Lab，lecture和assignment全部作为该周project中的module
+
+
+
+*   Lecture of week2: lecture3 completed
+
+    
+
+
 
 
 
