@@ -34,6 +34,12 @@ data structures&algorithms
 
 
 
+### day4
+
+*   Lecture of week2: lecture4 差最后2节看完
+
+
+
 
 
 
