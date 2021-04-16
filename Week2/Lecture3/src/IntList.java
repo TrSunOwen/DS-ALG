@@ -68,6 +68,54 @@ public class IntList {
         return L;
     }
 
+    /** Implement square and squareMutative which are static methods that both take in
+    an IntList L and return an IntList with its integer values all squared. square does
+    this non-mutatively with recursion by creating new IntLists while squareMutative
+    uses a recursive approach to change the instance variables of the input IntList L. */
+
+    public static IntList square (IntList L) {
+        // recursion method
+//        if (L == null) {
+//            return L;
+//        } else {
+//            IntList rest = square(L.rest);
+//            IntList M = new IntList(L.first * L.first, rest);
+//            return M;
+//        }
+
+        // interation method
+        if (L == null) {
+            return L;
+        }
+        IntList B = L.rest;
+        IntList M = new IntList(L.first * L.first, null);
+        IntList C = M;
+        while (B != null) {
+            C.rest = new IntList(B.first * B.first, null);
+            B = B.rest;
+            C = C.rest;
+        }
+        return M;
+    }
+
+    public static IntList squareMutative (IntList L) {
+        // iteration method
+//        IntList B = L;
+//        while (B != null) {
+//            B.first = B.first * B.first;
+//            B = B.rest;
+//        }
+//        return L;
+
+        // recursion method
+        if (L == null) {
+            return L;
+        }
+        L.first = L.first * L.first;
+        squareMutative(L.rest);
+        return L;
+    }
+
     public static void main(String[] args) {
         IntList L = new IntList(15, null);
         L = new IntList(10, L);
@@ -78,13 +126,19 @@ public class IntList {
 //        System.out.println(L.get(2));
 
         /** Test incrList() */
-        System.out.println(L);
-        System.out.println(incrList(L, 3));
-        System.out.println(L);
+//        System.out.println(L);
+//        System.out.println(incrList(L, 3));
+//        System.out.println(L);
 
-        /** Test dincrList() */
-        System.out.println(L);
-        System.out.println(dincrList(L, 3));
-        System.out.println(L);
+//        /** Test dincrList() */
+//        System.out.println(L);
+//        System.out.println(dincrList(L, 3));
+//        System.out.println(L);
+
+        /** Test square() */
+//        System.out.println(square(L));
+
+        /** Test squareMutative() */
+        System.out.println(squareMutative(L));
     }
 }
