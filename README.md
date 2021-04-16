@@ -30,6 +30,7 @@ data structures&algorithms
 
 *   Week2中discussion中第一个pdf的习题完成
 *   Week2中discussion中第二个pdf的习题还剩第4题没有做完
+*   lab2 completed
 
 
 
