@@ -16,39 +16,54 @@ public class SLList {
         }
     }
 
-    public IntNode first;
+    /* The first item (if exists) is at sentinel.next */
+    private IntNode sentinel;
+
+//    public IntNode first;
 
     /** Create an empty SLList */
     public SLList() {
+        sentinel = new IntNode(-1, null); // You can set -1 or any number you want. It doesn't matter.
         size = 0;
-        first = null;
+//        first = null;
     }
 
     public SLList(int x) {
-        first = new IntNode(x, null);
+        /* Use a sentinel */
+        sentinel = new IntNode(-1, null);
+        sentinel.next = new IntNode(x, null);
+//        first = new IntNode(x, null);
+        size = 1;
     }
 
     /** Add x to the front of the list */
     public void addFirst(int x) {
-        first = new IntNode(x, first);
+        /* Use a sentinel */
+        sentinel.next = new IntNode(x, sentinel.next);
+//        first = new IntNode(x, first);
 
         size = size + 1; // One more element! If we want a quick method to find out the size of the list
     }
 
     /** Return the first item in the list */
     public int getFirst() {
-        return first.item;
+        /* Use a sentinel */
+        return sentinel.next.item;
+//        return first.item;
     }
 
     /** Add the item to the end of the list */
     public void addLast(int x) {
         size = size + 1; // One more element! If we want a quick method to find out the size of the list
 
-        if (first == null) {
-            first = new IntNode(x, null);
-            return;
-        }
-        IntNode p = first;
+        /* Use a sentinel */
+        IntNode p = sentinel;
+
+//        if (first == null) {
+//            first = new IntNode(x, null);
+//            return;
+//        }
+//        IntNode p = first;
         while (p.next != null) {
             p = p.next;
         }
@@ -72,16 +87,16 @@ public class SLList {
      */
 
     /** Return the size of the list that starts at IntNode p */
-    private static int size (IntNode p) {
-        if (p.next == null) {
-            return 1;
-        }
-        return (1 + size(p.next));
-    }
-
-    public int size(){
-        return size(first);
-    }
+//    private static int size (IntNode p) {
+//        if (p.next == null) {
+//            return 1;
+//        }
+//        return (1 + size(p.next));
+//    }
+//
+//    public int size(){
+//        return size(first);
+//    }
 
     /** What if we need very fast method to find out the size of the list?
      * It means no matter how big the list is, we want a constant time, not a linear time
@@ -89,7 +104,7 @@ public class SLList {
 
     /** An easy way: initiate the size of the SLList */
     /** We call this kind of method: cashing */
-    public int size = 1;
+    public int size = 0;
 
     private int fastSize() {
         return size;
@@ -99,8 +114,8 @@ public class SLList {
         /* Create a list of one integer, namely 10 */
         SLList L = new SLList();
 //        L.addFirst(10);
-        L.addLast(5);
-//        L.addLast(20);
+//        L.addLast(5);
+        L.addLast(20);
         System.out.println(L.fastSize());
 
     }
