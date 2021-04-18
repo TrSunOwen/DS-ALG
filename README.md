@@ -40,6 +40,13 @@ data structures&algorithms
 
 
 
+### day5
+
+*   Lecture of week2: lecture 4 完成
+*   proj0完成一半，update部分之前已经全部完成
+
+
+
 
 
 
