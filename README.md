@@ -47,6 +47,12 @@ data structures&algorithms
 
 
 
+### day6
+
+*   Lecture of week2: lecture 5 看完了前5节
+
+
+
 
 
 

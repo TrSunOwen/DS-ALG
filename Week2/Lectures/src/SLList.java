@@ -1,73 +1,73 @@
 /** An SLList is a list of integers, which hides the terrible
  * truth of the nakedness within */
-public class SLList {
+public class SLList<T> {
     /** Nested class
      * The same thing like the IntNode.java file
      * Use private since nobody will have access to IntNode
      * And, we could use 'static' keyword because the nested
      * class will never have access from the external */
-    private static class IntNode {
-        public int item;
-        public IntNode next;
+    private class Node {
+        public T item;
+        public Node next;
 
-        public IntNode (int i, IntNode n) {
+        public Node (T i, Node n) {
             item = i;
             next = n;
         }
     }
 
     /* The first item (if exists) is at sentinel.next */
-    private IntNode sentinel;
+    private Node sentinel;
 
-//    public IntNode first;
+//    public Node first;
 
     /** Create an empty SLList */
     public SLList() {
-        sentinel = new IntNode(-1, null); // You can set -1 or any number you want. It doesn't matter.
+        sentinel = new Node(null, null); // You can set -1 or any number you want. It doesn't matter.
         size = 0;
 //        first = null;
     }
 
-    public SLList(int x) {
+    public SLList(T x) {
         /* Use a sentinel */
-        sentinel = new IntNode(-1, null);
-        sentinel.next = new IntNode(x, null);
-//        first = new IntNode(x, null);
+        sentinel = new Node(x, null);
+        sentinel.next = new Node(x, null);
+//        first = new Node(x, null);
         size = 1;
     }
 
     /** Add x to the front of the list */
-    public void addFirst(int x) {
+    public void addFirst(T x) {
         /* Use a sentinel */
-        sentinel.next = new IntNode(x, sentinel.next);
+        sentinel.next = new Node(x, sentinel.next);
 //        first = new IntNode(x, first);
 
         size = size + 1; // One more element! If we want a quick method to find out the size of the list
     }
 
     /** Return the first item in the list */
-    public int getFirst() {
+    public T getFirst() {
         /* Use a sentinel */
         return sentinel.next.item;
 //        return first.item;
     }
 
     /** Add the item to the end of the list */
-    public void addLast(int x) {
+    public void addLast(T x) {
         size = size + 1; // One more element! If we want a quick method to find out the size of the list
 
         /* Use a sentinel */
-        IntNode p = sentinel;
+        Node p = sentinel;
 
 //        if (first == null) {
-//            first = new IntNode(x, null);
+//            first = new Node(x, null);
 //            return;
 //        }
-//        IntNode p = first;
+//        Node p = first;
         while (p.next != null) {
             p = p.next;
         }
-        p.next = new IntNode(x, null);
+        p.next = new Node(x, null);
     }
 
     /** Return the size of the whole list
@@ -87,7 +87,7 @@ public class SLList {
      */
 
     /** Return the size of the list that starts at IntNode p */
-//    private static int size (IntNode p) {
+//    private static int size (Node p) {
 //        if (p.next == null) {
 //            return 1;
 //        }
@@ -112,11 +112,14 @@ public class SLList {
 
     public static void main(String[] args) {
         /* Create a list of one integer, namely 10 */
-        SLList L = new SLList();
+//        SLList L = new SLList();
 //        L.addFirst(10);
 //        L.addLast(5);
-        L.addLast(20);
-        System.out.println(L.fastSize());
+//        L.addLast(20);
+//        System.out.println(L.fastSize());
 
+        SLList<Object> sl = new SLList<>(2);
+        sl.addLast("string");
+        System.out.println(sl);
     }
 }
