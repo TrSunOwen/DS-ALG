@@ -53,6 +53,12 @@ data structures&algorithms
 
 
 
+### day7 2021.4.20
+
+*   lecture of week2 全部完成
+
+
+
 
 
 
