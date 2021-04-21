@@ -61,6 +61,14 @@ data structures&algorithms
 
 
 
+### day8 2021.4.21
+
+*   Project0 完成
+*   Lecture of week3 Lecture 6看完
+*   Discussion1 of week3 习题只做完了LinkedList
+
+
+
 
 
 
