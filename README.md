@@ -69,7 +69,20 @@ data structures&algorithms
 
 
 
+### day9 2021.5.10
+
+*   Lecture of week3 Lecture 7&8看完
 
 
 
+### day10 2021.5.11
 
+*   proj1b做完大半
+*   什么是广义回文？
+
+
+
+### day11 2021.5.12
+
+*   proj1b完成，但是跑评分有问题
+*   lecture of week4 Lecture9完成
