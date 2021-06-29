@@ -98,7 +98,7 @@
 
 ### day13 2021.6.12
 
--   [x] Week4 Lecture10&11完成
+-   [x] Week4 Lecture10&1完成
 
 -   [x] Week4 discussion完成
 
@@ -107,4 +107,17 @@
 ### day14 2021.6.13
 
 -   [x] HW1完成
+
+
+
+### day15 2021.6.27
+
+-   [x] Week9 Lecutre23完成
+-   [x] HW3完成
+
+-   [x] Lab9完成
+
+### day16 2021.6.29
+
+-   [x] Lab10完成
 
